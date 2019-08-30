@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block body %}
+ <div class="container">
+
+    <div class="row">
+
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Title -->
+        <h1 class="mt-4">{{article.title}}</h1>
+
+        <!-- Author -->
+
+
+        <hr>
+
+        <!-- Date/Time -->
+        <p>{{article.created_date}}</p>
+
+        <hr>
+        {% if articles.article_image %}
+        <!-- Preview Image -->
+        <img class="img-fluid rounded" src="{{articles.article_image.url}}" alt="">
+        {% else %}
+        {% endif %}
+
+          <hr>
+
+        <!-- Post Content -->
+        <p class="lead">{{article.content|safe}}</p>
+
+
+
+
+
+
+    <hr>
+
+    <div class = "container">
+
+    <br><br>
+
+
+
+
+
+
+
+    </form>
+</div>
+</div>
+ </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}
